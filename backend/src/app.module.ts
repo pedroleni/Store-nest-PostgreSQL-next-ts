@@ -7,6 +7,10 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { typeOrmConfig } from './config/typeorm.config';
 
+import { CuponesModule } from './cupones/cupones.module';
+import { TransacionesModule } from './transaciones/transaciones.module';
+import { ProductosModule } from './productos/productos.module';
+
 @Module({
   imports: [
     CategoriasModule,
@@ -15,6 +19,9 @@ import { typeOrmConfig } from './config/typeorm.config';
       useFactory: typeOrmConfig,
       inject: [ConfigService],
     }),
+    CuponesModule,
+    TransacionesModule,
+    ProductosModule,
   ],
 
   controllers: [AppController],
