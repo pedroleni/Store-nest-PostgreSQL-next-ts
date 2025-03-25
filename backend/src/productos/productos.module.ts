@@ -10,5 +10,6 @@ import { UploadImageModule } from 'src/upload-image/upload-image.module';
   imports: [TypeOrmModule.forFeature([Producto, Categoria]), UploadImageModule],
   controllers: [ProductosController],
   providers: [ProductosService],
+  exports: [TypeOrmModule], // 👈 Esto permite usar Producto en otros módulos
 })
 export class ProductosModule {}

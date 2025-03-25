@@ -3,8 +3,9 @@ import { SeederService } from './seeder.service';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { typeOrmConfig } from '../config/typeorm.config';
-import { Producto } from 'src/productos/entities/producto.entity';
 import { Categoria } from 'src/categorias/entities/categoria.entity';
+import { Producto } from 'src/productos/entities/producto.entity';
+console.log('sdsg', Producto);
 
 @Module({
   imports: [
@@ -19,4 +20,8 @@ import { Categoria } from 'src/categorias/entities/categoria.entity';
   ],
   providers: [SeederService],
 })
-export class SeederModule {}
+export class SeederModule {
+  getName() {
+    console.log('sdsg', Producto);
+  }
+}

@@ -7,6 +7,7 @@ async function bootstrap() {
   /// nos permite que en los dto tengan validaciones
   // instalar npm i class-validator class-transfomer
   app.useGlobalPipes(new ValidationPipe({ whitelist: true }));
+
   await app.listen(process.env.PORT ?? 3000);
 }
 bootstrap();
