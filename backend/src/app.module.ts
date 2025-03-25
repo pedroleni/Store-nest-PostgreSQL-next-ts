@@ -10,6 +10,7 @@ import { ProductosModule } from './productos/productos.module';
 import { TransactionsModule } from './transactions/transactions.module';
 import { CouponsModule } from './coupons/coupons.module';
 import { UploadImageModule } from './upload-image/upload-image.module';
+import { SeederModule } from './seeder/seeder.module';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { UploadImageModule } from './upload-image/upload-image.module';
     ProductosModule,
     UploadImageModule,
     CategoriasModule,
+    SeederModule,
   ],
 
   controllers: [AppController],
